@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { Button } from './ui/button'
 import { ArrowLeft, X } from 'lucide-react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { listAPI, cardAPI } from '../lib/api'
+import { listAPI, cardAPI } from '@/lib/api'
 
 interface MoveAllCardsModalProps {
   isOpen: boolean

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { X, Calendar, Users, Tag, CheckSquare, MessageSquare, Plus, Paperclip, Palette } from 'lucide-react'
-import { cardAPI, commentAPI, labelAPI, attachmentAPI } from '../lib/api'
+import { cardAPI, commentAPI, labelAPI, attachmentAPI } from '@/lib/api'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
