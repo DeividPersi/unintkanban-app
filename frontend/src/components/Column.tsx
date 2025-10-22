@@ -1,6 +1,6 @@
 import { Droppable } from '@hello-pangea/dnd'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { cardAPI, listAPI } from '../lib/api.ts'
+import { cardAPI, listAPI } from '@/lib/api'
 import { List as ListType } from '../types'
 import CardItem from './CardItem'
 import { Button } from './ui/button'

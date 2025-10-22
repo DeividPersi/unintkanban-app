@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { Button } from './ui/button'
 import { ArrowLeft, X } from 'lucide-react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { cardAPI } from '../lib/api.ts'
+import { cardAPI } from '@/lib/api'
 
 interface SortCardsModalProps {
   isOpen: boolean
