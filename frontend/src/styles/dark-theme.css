@@ -1,0 +1,103 @@
+/* Paleta de cores baseada na imagem - tons de cinza em camadas */
+:root {
+  /* Cores da paleta da imagem */
+  --dark-layer-1: #0a0a0a;      /* Faixa mais escura (quase preto) */
+  --dark-layer-2: #1a1a1a;      /* Faixa cinza escuro */
+  --dark-layer-3: #0f0f0f;      /* Faixa muito escura */
+  --dark-layer-4: #1f1f1f;      /* Faixa cinza médio-escuro */
+  --dark-layer-5: #0c0c0c;      /* Faixa escura */
+  --dark-layer-6: #1c1c1c;      /* Faixa cinza escuro */
+  --dark-deepest: #000000;      /* Preto profundo (parte inferior) */
+  
+  /* Cores derivadas para interface */
+  --dark-bg-primary: var(--dark-layer-1);     /* Fundo principal */
+  --dark-bg-secondary: var(--dark-layer-2);   /* Superfícies */
+  --dark-bg-tertiary: var(--dark-layer-4);    /* Cards e containers */
+  --dark-bg-hover: var(--dark-layer-6);       /* Hover states */
+  --dark-border: #2a2a2a;                     /* Bordas */
+  --dark-border-light: #3a3a3a;               /* Bordas claras */
+  --dark-text-primary: #ffffff;               /* Texto principal */
+  --dark-text-secondary: #b3b3b3;             /* Texto secundário */
+  --dark-text-muted: #808080;                 /* Texto suave */
+  --dark-accent: #808080;                     /* Cinza para elementos interativos */
+}
+
+/* Aplicar tema escuro personalizado */
+.dark {
+  --background: var(--dark-bg-primary);
+  --foreground: var(--dark-text-primary);
+  --card: var(--dark-bg-tertiary);
+  --card-foreground: var(--dark-text-primary);
+  --popover: var(--dark-bg-secondary);
+  --popover-foreground: var(--dark-text-primary);
+  --primary: var(--dark-accent);
+  --primary-foreground: var(--dark-text-primary);
+  --secondary: var(--dark-bg-secondary);
+  --secondary-foreground: var(--dark-text-secondary);
+  --muted: var(--dark-bg-hover);
+  --muted-foreground: var(--dark-text-muted);
+  --accent: var(--dark-bg-hover);
+  --accent-foreground: var(--dark-text-primary);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--dark-text-primary);
+  --border: var(--dark-border);
+  --input: var(--dark-border);
+  --ring: var(--dark-accent);
+  --radius: 0.5rem;
+}
+
+/* Classes personalizadas para o tema em camadas */
+.dark-layered-bg {
+  background: linear-gradient(
+    180deg,
+    var(--dark-layer-1) 0%,
+    var(--dark-layer-2) 16.66%,
+    var(--dark-layer-3) 33.33%,
+    var(--dark-layer-4) 50%,
+    var(--dark-layer-5) 66.66%,
+    var(--dark-layer-6) 83.33%,
+    var(--dark-deepest) 100%
+  );
+}
+
+.dark-surface {
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-card {
+  background-color: var(--dark-bg-tertiary);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-card-hover {
+  background-color: var(--dark-bg-tertiary);
+  border: 1px solid var(--dark-border);
+  transition: all 0.2s ease;
+}
+
+.dark-card-hover:hover {
+  background-color: var(--dark-bg-hover);
+  border-color: var(--dark-border-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-text-primary {
+  color: var(--dark-text-primary);
+}
+
+.dark-text-secondary {
+  color: var(--dark-text-secondary);
+}
+
+.dark-text-muted {
+  color: var(--dark-text-muted);
+}
+
+.dark-border-subtle {
+  border-color: var(--dark-border);
+}
+
+.dark-border-light {
+  border-color: var(--dark-border-light);
+}

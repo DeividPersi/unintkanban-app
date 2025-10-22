@@ -1,0 +1,43 @@
+# Multi-stage build
+FROM node:18-alpine as frontend-build
+WORKDIR /app/frontend
+COPY frontend/package*.json ./
+RUN npm ci --only=production
+COPY frontend/ ./
+RUN npm run build
+
+FROM python:3.11-slim as backend-build
+WORKDIR /app
+COPY backend/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Production stage
+FROM python:3.11-slim
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    nginx \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy backend
+COPY backend/ ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy frontend build
+COPY --from=frontend-build /app/frontend/dist ./frontend/dist
+
+# Configure nginx
+COPY nginx.railway.conf /etc/nginx/sites-available/default
+RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+# Create directories
+RUN mkdir -p /app/media /app/static /app/db
+
+# Expose port
+EXPOSE 80
+
+# Start script
+COPY start.sh ./
+RUN chmod +x start.sh
+CMD ["./start.sh"]
