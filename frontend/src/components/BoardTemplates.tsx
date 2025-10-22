@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { boardAPI } from '../lib/api.ts'
+import { boardAPI } from '@/lib/api'
 import { Button } from './ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from './ui/dialog'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { X, Plus, Users, UserPlus, Trash2, Crown, Shield, User } from 'lucide-react'
-import { boardAPI } from '../lib/api.ts'
+import { boardAPI } from '@/lib/api'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
