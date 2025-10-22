@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { boardAPI } from '../lib/api'
+import { boardAPI } from '../lib/api.ts'
 import { useAuth } from '../hooks/useAuth'
 import Board from '../components/Board'
 import { Button } from '../components/ui/button'

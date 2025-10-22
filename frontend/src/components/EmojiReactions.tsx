@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { commentAPI } from '../lib/api'
+import { commentAPI } from '../lib/api.ts'
 import { Smile, ThumbsUp, Heart, Laugh, Eye, Frown, Angry, Sparkles, Flame, Hash } from 'lucide-react'
 
 interface EmojiReactionsProps {

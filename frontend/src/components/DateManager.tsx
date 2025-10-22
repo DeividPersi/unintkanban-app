@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { cardAPI } from '../lib/api'
+import { cardAPI } from '../lib/api.ts'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
