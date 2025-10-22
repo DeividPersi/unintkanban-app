@@ -1,6 +1,6 @@
 import { DragDropContext, DropResult, Droppable, Draggable } from '@hello-pangea/dnd'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { listAPI, cardAPI, labelAPI, boardAPI } from '@/lib/api'
+import { listAPI, cardAPI, labelAPI, boardAPI } from '@/lib/api.ts'
 import { Board as BoardType } from '../types'
 import Column from './Column'
 import FilterBar from './FilterBar'
