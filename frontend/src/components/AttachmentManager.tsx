@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { X, Upload, Download, File, Image, FileText, Trash2, Edit2 } from 'lucide-react'
-import { attachmentAPI } from '@/lib/api.ts'
+import { attachmentAPI } from '../lib/api.ts'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Card, CardContent } from './ui/card'
