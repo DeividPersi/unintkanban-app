@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { Button } from './ui/button'
 import { ArrowLeft, X } from 'lucide-react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { boardAPI, listAPI } from '@/lib/api'
+import { boardAPI, listAPI } from '../lib/api.ts'
 
 interface MoveListModalProps {
   isOpen: boolean

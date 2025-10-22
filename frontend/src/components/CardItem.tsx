@@ -8,7 +8,7 @@ import { format, parseISO, isAfter, isBefore } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import CardDetailModal from './CardDetailModal'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { cardAPI } from '@/lib/api'
+import { cardAPI } from '../lib/api.ts'
 
 interface CardItemProps {
   card: CardType
