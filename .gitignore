@@ -24,6 +24,16 @@ wheels/
 MANIFEST
 
 # -----------------------
+# DJANGO SPECIFIC
+# -----------------------
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# -----------------------
 # DJANGO
 # -----------------------
 *.log
@@ -85,6 +95,9 @@ docker-compose.prod.yml
 
 # Railway
 .railway/
+
+# Render
+.render/
 
 # -----------------------
 # TEMP / CACHE
