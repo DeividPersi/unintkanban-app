@@ -24,7 +24,6 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-    "suppressImplicitAnyIndexErrors": true,
     "noImplicitOverride": false,
 
     /* Path mapping */
