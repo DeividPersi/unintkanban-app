@@ -13,6 +13,7 @@
 - `Dockerfile.render` - Dockerfile para produção
 - `nginx.render.conf` - Configuração do Nginx
 - `start.render.sh` - Script de inicialização
+- `env.example` - Exemplo de variáveis de ambiente
 
 ### **Arquivos Atualizados:**
 - `backend/server/settings.py` - Configurações de produção
@@ -48,12 +49,20 @@ git push origin main
    - **Region**: `Oregon (US West)`
 
 ### **4. Configurar Variáveis de Ambiente**
-Adicione as seguintes variáveis:
+
+#### **Opção A: Dashboard do Render (Recomendado)**
+Na seção "Environment Variables", adicione:
 - `DEBUG` = `False`
 - `SECRET_KEY` = `sua-chave-secreta-aqui`
 - `ALLOWED_HOSTS` = `*.onrender.com`
 - `CORS_ALLOWED_ORIGINS` = `https://*.onrender.com`
 - `DATABASE_URL` = `sqlite:///db/db.sqlite3`
+
+#### **Opção B: Arquivo .env (Opcional)**
+1. Copie o arquivo de exemplo: `cp env.example .env`
+2. Edite o `.env` com seus valores
+3. Configure as mesmas variáveis no dashboard do Render
+4. **NUNCA** commite o arquivo `.env` (está no .gitignore)
 
 ### **5. Fazer Deploy**
 1. Clique em "Create Web Service"
