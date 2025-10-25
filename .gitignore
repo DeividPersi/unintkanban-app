@@ -12,7 +12,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ - Removed to allow frontend/src/lib/ to be tracked
 lib64/
 parts/
 sdist/
