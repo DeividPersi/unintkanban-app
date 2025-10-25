@@ -4,10 +4,6 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
-# Debug: verificar estrutura de diretórios
-RUN ls -la
-RUN ls -la src/
-RUN ls -la src/lib/
 RUN npm run build
 
 # Backend
