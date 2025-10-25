@@ -4,6 +4,8 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
+# Debug: verificar se o arquivo api.ts existe
+RUN ls -la src/lib/
 RUN npm run build
 
 # Backend
