@@ -23,6 +23,10 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get(
     'ALLOWED_HOSTS', 'localhost,127.0.0.1,0.0.0.0,kanban-app-unint.onrender.com').split(',')
 
+# Garantir que o domínio do Render esteja sempre incluído
+if 'kanban-app-unint.onrender.com' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('kanban-app-unint.onrender.com')
+
 # Configurações para produção
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_TZ = True
